@@ -5,14 +5,13 @@ from flask import render_template
 app = Flask(__name__)
 
 @app.route('/index/')
-@app.route('/index/<name>')
-def hello(name=None):
-    return render_template('index.html', name=name)
+def index():
+    return render_template('index.html')
 
-@app.route('/projects/')
-def projects():
-    return 'The project page'
+@app.route('/login/')
+def login():
+    return render_template('login.html')
 
-@app.route('/about')
-def about():
-    return 'The about page'
+@app.route('/sistema/')
+def sistema():
+    return render_template('sistema.html')
