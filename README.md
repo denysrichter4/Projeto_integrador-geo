@@ -6,7 +6,7 @@
 
 ## Contribuições:
 
-### - Para contribuir com o projeto, por favor, crie uma nova branch a partir da "main", utilizando o comando -> git checkout -b "nome da branch"
+### - Para contribuir com o projeto, por favor, crie uma nova branch a partir da "main", utilizando o comando: git checkout -b "nome da branch"
 ### - Após realizar as alterações necessárias, faça um MERGE REQUEST de sua branch com a "main"
 ### - O MERGE REQUEST será revisado e aprovado se estiver tudo OK
 
