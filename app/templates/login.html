@@ -5,13 +5,13 @@
     <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/bootstrap.min.css')}}" media="screen">
   </head>
   <body class="body">
-    <div class="container-lg" style="text-align: center;">
+    <div class="container-lg">
       <div class="row align-items-center">
         <div class="col">
         </div>
         <div class="col">
-          <form style="padding: 100px;text-align: center;">
-            <h3 style="text-align: center;">Gerenciador Educacional On-Line</h3>
+          <form style="padding: 100px;">
+            <h3 style="text-align: center;min-width: 300px;margin-bottom: 50px;">Gerenciador Educacional On-Line</h3>
             <div class="mb-3">
               <label style="text-align: start;" for="exampleInputEmail1" class="form-label">Email</label>
               <input style="text-align: start;min-width: 300px;" type="email" class="form-control" id="inputEmail">
@@ -20,7 +20,7 @@
               <label style="text-align: start;" for="exampleInputPassword1" class="form-label">Senha</label>
               <input style="text-align: start;min-width: 300px;" type="password" class="form-control" id="inputPassword">
             </div>
-            <a style="width: 300px;" class="btn btn-primary" href="{{url_for('sistema')}}" role="button">Login</a>
+            <a style="min-width: 300px;" class="btn btn-primary" href="{{url_for('sistema')}}" role="button">Login</a>
           </form>
         </div>
         <div class="col">
