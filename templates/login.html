@@ -1,4 +1,25 @@
 <!doctype html>
-<title>Gerenciador Educacional On-Line</title>
 
-  <h1>LOGIN</h1>
+<html>
+  <head>
+    <title>Gerenciador Educacional On-Line</title>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/bootstrap.min.css')}}" media="screen">
+  </head>
+  <body class="body">
+    <div class="container-lg">
+      <form style="padding: 100px;">
+        <h3 style="text-align: center;width: 300px;">Gerenciador Educacional On-Line</h3>
+        <div class="mb-3" style="width: 300px;">
+          <label for="exampleInputEmail1" class="form-label">Email</label>
+          <input type="email" class="form-control" id="exampleInputEmail1">
+        </div>
+        <div class="mb-3" style="width: 300px;">
+          <label for="exampleInputPassword1" class="form-label">Senha</label>
+          <input type="password" class="form-control" id="exampleInputPassword1">
+        </div>
+        <button style="width: 300px;" type="submit" class="btn btn-primary">Login</button>
+      </form>
+    </div>
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='js/bootstrap.min.js')}}" media="screen">
+  </body>
+</html>
