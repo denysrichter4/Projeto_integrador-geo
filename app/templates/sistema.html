@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Gerenciador Educacional On-Line</title>
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css/bootstrap.min.css')}}" media="screen">
+</head>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">G-E-O</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Classes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Alunos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Chamadas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Notas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{url_for('login')}}">Logout</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Pesquisar Aluno" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
+      </form>
+    </div>
+  </div>
+</nav>
+<body>
+  <table style="margin: 50px;max-width: 1200px;" class="table">
+    <thead>
+      <tr>
+        <th scope="col" style="width: 20px;">Número</th>
+        <th scope="col" style="width: 100px;">Nome</th>
+        <th scope="col" style="width: 20px;">Classe</th>
+        <th scope="col" style="width: 30px;">Matéria</th>
+        <th scope="col" style="width: 20px;">Nota</th>
+        <th scope="col" style="width: 40px;">Dias Letivos</th>
+        <th scope="col" style="width: 20px;">Faltas</th>
+        <th scope="col" style="width: 50px;">Percentual de presença</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Fulano de Tal</td>
+        <td>3ª B</td>
+        <td>Matemática</td>
+        <td>7,5</td>
+        <td>100</td>
+        <td>42</td>
+        <td>58%</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Beltrano Alguem</td>
+        <td>3ª B</td>
+        <td>Matemática</td>
+        <td>8,5</td>
+        <td>100</td>
+        <td>30</td>
+        <td>70%</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>Cicrano tambem</td>
+        <td>3ª B</td>
+        <td>Matemática</td>
+        <td>6,5</td>
+        <td>100</td>
+        <td>53</td>
+        <td>47%</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='js/bootstrap.min.js')}}" media="screen">
+</html>
