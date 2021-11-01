@@ -10,17 +10,23 @@
         <div class="col">
         </div>
         <div class="col">
-          <form style="padding: 100px;">
+          <form action="" method="POST" style="padding: 100px;">
+            {{form.csrf_token}}
             <h3 style="text-align: center;min-width: 300px;margin-bottom: 50px;">Gerenciador Educacional On-Line</h3>
-            <div class="mb-3">
+            <div class="md-3">
               <label style="text-align: start;" for="exampleInputEmail1" class="form-label">Email</label>
-              <input style="text-align: start;min-width: 300px;" type="email" class="form-control" id="inputEmail">
+              {{form.email(class="form-control",placeholder="email")}}
             </div>
-            <div class="mb-3">
+            <div class="md-3">
               <label style="text-align: start;" for="exampleInputPassword1" class="form-label">Senha</label>
-              <input style="text-align: start;min-width: 300px;" type="password" class="form-control" id="inputPassword">
+              {{form.senha(class="form-control")}}
             </div>
-            <a style="min-width: 300px;" class="btn btn-primary" href="{{url_for('sistema')}}" role="button">Login</a>
+            <div class="checkbox">
+              <label>{{form.manterConectado}} Manter Conectado?</label>
+            </div>
+            <!--<a style="min-width: 300px;" class="btn btn-primary" href="{{url_for('sistema')}}" role="button">Login</a> -->
+            <button type="submit" class="btn btn-primary">Login</button>
+            <a class="link" href="{{url_for('cadastro')}}">Cadastrar-se</a>
           </form>
         </div>
         <div class="col">

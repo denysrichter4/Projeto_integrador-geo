@@ -8,6 +8,23 @@ class Professores(db.Model):
     email = db.Column(db.String, unique=True)
     senha = db.Column(db.String)
 
+    @property
+    def is_authenticated(self):
+        return True
+    
+    @property
+    def is_active(self):
+        return True
+
+    @property
+    def is_anonymous(self):
+        return False
+    
+    @property
+    def get_id(self):
+        return str(self.id)
+    
+
     def __init__(self, nome, email, senha):
         self.nome = nome
         self.email = email
