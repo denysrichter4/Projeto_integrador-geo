@@ -18,73 +18,49 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Classes</a>
+          <a class="nav-link" href="{{url_for('cadastro_aluno')}}">Cadastro</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Alunos</a>
+          <a class="nav-link" href="#">Consulta</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Chamadas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Notas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{url_for('login')}}">Logout</a>
+          <a class="nav-link" href="{{url_for('logout')}}">Logout</a>
         </li>
       </ul>
       <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Pesquisar Aluno" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Pesquisar</button>
       </form>
     </div>
   </div>
 </nav>
 <body>
-  <table style="margin: 50px;max-width: 1200px;" class="table">
+  <table style="margin: 50px;max-width: 900px;" class="table">
     <thead>
       <tr>
-        <th scope="col" style="width: 20px;">Número</th>
-        <th scope="col" style="width: 100px;">Nome</th>
-        <th scope="col" style="width: 20px;">Classe</th>
-        <th scope="col" style="width: 30px;">Matéria</th>
-        <th scope="col" style="width: 20px;">Nota</th>
-        <th scope="col" style="width: 40px;">Dias Letivos</th>
-        <th scope="col" style="width: 20px;">Faltas</th>
-        <th scope="col" style="width: 50px;">Percentual de presença</th>
+        <th scope="col" style="max-width: 70px;">Nº</th>
+        <th scope="col" style="max-width: 300px;">Nome completo do aluno</th>
+        <th scope="col" style="max-width: 70px;">Classe</th>
+        <th scope="col" style="max-width: 100px;">Matéria</th>
+        <th scope="col" style="max-width: 70px;">Nota</th>
+        <th scope="col" style="max-width: 70px;">Aulas</th>
+        <th scope="col" style="max-width: 70px;">Faltas</th>
+        <th scope="col" style="max-width: 70px;"></th>
+        <th scope="col" style="max-width: 70px;"></th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Fulano de Tal</td>
-        <td>3ª B</td>
-        <td>Matemática</td>
-        <td>7,5</td>
-        <td>100</td>
-        <td>42</td>
-        <td>58%</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Beltrano Alguem</td>
-        <td>3ª B</td>
-        <td>Matemática</td>
-        <td>8,5</td>
-        <td>100</td>
-        <td>30</td>
-        <td>70%</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Cicrano tambem</td>
-        <td>3ª B</td>
-        <td>Matemática</td>
-        <td>6,5</td>
-        <td>100</td>
-        <td>53</td>
-        <td>47%</td>
-      </tr>
+      {% for aluno in alunos %}
+        <tr>
+          <th scope="row" style="max-width: 70px;">{{ aluno.numero }}</th>
+          <td style="max-width: 300px;">{{ aluno.nome }}</td>
+          <td style="max-width: 70px;">{{ aluno.classe }}</td>
+          <td style="max-width: 100px;">{{ aluno.materia }}</td>
+          <td style="max-width: 70px;">{{ aluno.nota }}</td>
+          <td style="max-width: 70px;">{{ aluno.qtd_aulas }}</td>
+          <td style="max-width: 70px;">{{ aluno.qtd_faltas }}</td>
+          <td><a class="btn btn-outline-warning" href="{{url_for('update', aluno_id = aluno['id'])}}" role="button" style="max-width: 70px;">Editar</a></td>
+          <td><a class="btn btn-outline-danger" href="{{url_for('delete', aluno_id = aluno['id'])}}" role="button" style="max-width: 70px;">Deletar</a></td>
+        </tr>
+      {% endfor %}
     </tbody>
   </table>
 </body>
