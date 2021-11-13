@@ -22,3 +22,21 @@ class FormCadastroAluno(FlaskForm):
     nota = StringField('nota', validators=[DataRequired()])
     aulas = StringField('aulas', validators=[DataRequired()])
     faltas = StringField('faltas', validators=[DataRequired()])
+
+class FormAtualizaAluno(FlaskForm):
+    numero = StringField('numero')
+    nome = StringField('nome')
+    classe = StringField('classe')
+    materia = StringField('materia')
+    nota = StringField('nota')
+    aulas = StringField('aulas')
+    faltas = StringField('faltas')
+
+class FormConsultaAluno(FlaskForm):
+    numero = StringField('numero')
+    nome = StringField('nome')
+    classe = StringField('classe')
+    materia = StringField('materia')
+    nota = StringField('nota')
+    aulas = StringField('aulas')
+    faltas = StringField('faltas')
